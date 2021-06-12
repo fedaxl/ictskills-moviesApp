@@ -65,6 +65,17 @@ const MovieDetails = ( props) => {
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
 
+      <Paper component="ul" className={classes.root}>
+        <li>
+          <Chip label="Production Countries" className={classes.chip} color="primary" />
+        </li>
+        {movie.production_companies.map((c) => (
+          <li key={c.origin_country}>
+            <Chip label={c.origin_country} className={classes.chip} />
+          </li>
+        ))}
+      </Paper>
+
       <Fab
         color="secondary"
         variant="extended"
