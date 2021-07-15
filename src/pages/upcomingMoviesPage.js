@@ -7,6 +7,7 @@ import Spinner from '../components/spinner'
 
 const UpcomingMoviesPage = (props) => {
 
+
 const {  data, error, isLoading, isError }  = useQuery('upcoming', getUpcomingMovies)
 
   if (isLoading) {

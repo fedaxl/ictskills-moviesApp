@@ -19,8 +19,10 @@ const MoviesContextProvider = (props) => {
 
   const addToPlaylist = (movie) => {
     setPlaylist([...playlist,movie.id])
+    //confirm in the console log if this functionality is working correctly
+    console.log(playlist);
   };
-  // We will use this function in a later section
+
   const removeFromPlaylist = (movie) => {
     setPlaylist( playlist.filter(
       (mId) => mId !== movie.id
